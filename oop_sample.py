@@ -19,6 +19,10 @@ class Point:
     def __str__(self):
         return "x=" + str(self.x) + ", y=" + str(self.y)
 
+    def halfway(self, target):
+        mx = (self.x + target.x) / 2
+        my = (self.y + target.y) / 2
+        return Point(mx, my)
 
 def distance(point1, point2):
     xdiff = point2.getx() - point1.getx()
@@ -35,3 +39,11 @@ q = Point(0, 0)
 print(distance(p, q))
 
 print(z)
+
+a = Point(3, 4)
+b = Point(5, 12)
+mid = a.halfway(b)
+
+print(mid)
+print(mid.getx())
+print(mid.gety())
