@@ -1,49 +1,28 @@
-import math
 
-class Point:
-    """Point class for representing and manipulating x,y coordinates. """
+class Phone:
+    """ This is a class to generate Phones with different color and size """
 
-    def __init__(self, initX, initY):
-        self.x = initX
-        self.y = initY
+    def __init__(self, col, siz):
+        self.color = col
+        self.size = siz
 
-    def getx(self):
-        return self.x
+    def getcolor(self):
+        return self.color
 
-    def gety(self):
-        return self.y
-
-    def distanceFromOrigin(self):
-        return ((self.x ** 2) + (self.y **2)) ** 0.5
+    def getsize(self):
+        return self.size
 
     def __str__(self):
-        return "x=" + str(self.x) + ", y=" + str(self.y)
+        return "My Phone color is " + str(self.color) + ", with size " + str(self.size)
 
-    def halfway(self, target):
-        mx = (self.x + target.x) / 2
-        my = (self.y + target.y) / 2
-        return Point(mx, my)
+object1 = Phone("red", "10cm")
+print(object1)
 
-def distance(point1, point2):
-    xdiff = point2.getx() - point1.getx()
-    ydiff = point2.gety() - point1.gety()
+object2 = Phone("black", "12cm")
+print(object2)
 
-    dist = math.sqrt(xdiff ** 2 + ydiff ** 2)
-    return dist
-
-z = Point(7, 6)
-print(z.distanceFromOrigin())
-
-p = Point(4, 3)
-q = Point(0, 0)
-print(distance(p, q))
-
-print(z)
-
-a = Point(3, 4)
-b = Point(5, 12)
-mid = a.halfway(b)
-
-print(mid)
-print(mid.getx())
-print(mid.gety())
+for i in range(2):
+    choose_color = str(input("Please choose a color for your Phone: ")) 
+    choose_size = str(input("Please choose a size for your Phone: "))
+    object3 = Phone(choose_color, choose_size)
+    print(object3)
