@@ -1,3 +1,5 @@
+import math
+
 class Point:
     """Point class for representing and manipulating x,y coordinates. """
 
@@ -15,5 +17,16 @@ class Point:
         return ((self.x ** 2) + (self.y **2)) ** 0.5
 
 
-p = Point(7, 6)
-print(p.distanceFromOrigin())
+def distance(point1, point2):
+    xdiff = point2.getx() - point1.getx()
+    ydiff = point2.gety() - point1.gety()
+
+    dist = math.sqrt(xdiff ** 2 + ydiff ** 2)
+    return dist
+
+z = Point(7, 6)
+print(z.distanceFromOrigin())
+
+p = Point(4, 3)
+q = Point(0, 0)
+print(distance(p, q))
