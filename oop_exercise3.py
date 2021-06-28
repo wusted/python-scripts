@@ -31,7 +31,7 @@ class Rectangle:
         return self.length
 
     def __str__(self):
-        return "Width=" + str(self.width) + ", Length=" + str(self.length)
+        return "Rectangle's " + "Width=" + str(self.width) + ", Length=" + str(self.length)
 
     def area(self):
         return self.width * self.length
@@ -39,4 +39,4 @@ class Rectangle:
 loc = Point(4, 5)
 r = Rectangle(loc, 6, 5)
 print(r)
-print(r.area())
+print("Area:", r.area())
