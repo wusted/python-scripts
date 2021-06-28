@@ -40,7 +40,9 @@ class Rectangle:
         return (self.width * 2) + (self.length * 2)
 
 loc = Point(4, 5)
-r = Rectangle(loc, 6, 5)
+width = int(input("Please enter a width for the rectangle: "))
+length = int(input("Please enter the length for the rectangle:  "))
+r = Rectangle(loc, width, length)
 print(r)
 print("Area:", r.area())
 print("Perimeter:", r.perimeter())
