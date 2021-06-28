@@ -39,6 +39,10 @@ class Rectangle:
     def perimeter(self):
         return (self.width * 2) + (self.length * 2)
 
+    def diagonal(self):
+        d = (self.width ** 2 + self.length ** 2) ** 0.5
+        return d
+
 loc = Point(4, 5)
 width = int(input("Please enter a width for the rectangle: "))
 length = int(input("Please enter the length for the rectangle:  "))
@@ -46,3 +50,4 @@ r = Rectangle(loc, width, length)
 print(r)
 print("Area:", r.area())
 print("Perimeter:", r.perimeter())
+print("Diagonal distance from lower left corner to Point of origin in x-y matrix:", r.diagonal())
