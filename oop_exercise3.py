@@ -18,23 +18,23 @@ class Point:
 class Rectangle:
     """ Rectangle class using Point, width and height. """
 
-    def __init__(self, initP, initW, initH):
+    def __init__(self, initP, initW, initL):
 
         self.location = initP
         self.width = initW
-        self.height = initH
+        self.length = initL
 
     def getWidht(self):
         return self.width
 
-    def getHeight(self):
-        return self.height
+    def getLength(self):
+        return self.length
 
     def __str__(self):
-        return "Width=" + str(self.width) + ", Height=" + str(self.height)
+        return "Width=" + str(self.width) + ", Length=" + str(self.length)
 
     def area(self):
-        return self.width * self.height
+        return self.width * self.length
 
 loc = Point(4, 5)
 r = Rectangle(loc, 6, 5)
