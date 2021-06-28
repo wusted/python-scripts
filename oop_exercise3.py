@@ -36,7 +36,11 @@ class Rectangle:
     def area(self):
         return self.width * self.length
 
+    def perimeter(self):
+        return (self.width * 2) + (self.length * 2)
+
 loc = Point(4, 5)
 r = Rectangle(loc, 6, 5)
 print(r)
 print("Area:", r.area())
+print("Perimeter:", r.perimeter())
